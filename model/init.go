@@ -4,9 +4,11 @@ import (
 	"database/sql"
 	"qiqigo/util"
 
+	// mysql驱动
 	_ "github.com/go-sql-driver/mysql"
 )
 
+// DB 数据库连接结构体
 var DB *sql.DB
 
 // InitDB 数据库初始化

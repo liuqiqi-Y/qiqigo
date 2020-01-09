@@ -8,11 +8,16 @@ import (
 )
 
 var (
-	Err    *log.Logger
-	Warn   *log.Logger
+	// Err 记录错误日志
+	Err *log.Logger
+	// Warn 记录警告日志
+	Warn *log.Logger
+	// Inform 记录信息日志
 	Inform *log.Logger
-	Debug  *log.Logger
+	// Debug 记录Debug日志
+	Debug *log.Logger
 )
+
 var file *os.File
 
 func init() {
@@ -22,6 +27,8 @@ func init() {
 	}
 	file = f
 }
+
+// SetLogLevel 设置日志级别
 func SetLogLevel(level string) {
 	switch level {
 	case "error":
